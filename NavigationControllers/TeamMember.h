@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface TeamMember : NSObject
 
@@ -14,14 +15,22 @@
 @property(nonatomic,strong)NSString * phoneNumber;
 @property(nonatomic,strong)NSString * cityOfBirth;
 @property(nonatomic,strong)NSString * favoriteBand;
-@property(nonatomic,weak)NSString * photoFile; // ?
+@property(nonatomic,strong) UIImage * image;
 
 -(instancetype)initWithName:(NSString *)name
                      number:(NSString *)phoneNumber
                 cityOfbirth:(NSString *)cityBirth
                favoriteBand:(NSString *)favoriteBand
-                  photoFile:(NSString *)photoFile;
+                  image:(UIImage *)image;
 
 
 
 @end
+
+/*
+modal v C 
+ modal data 
+ V
+ C
+ 
+ */

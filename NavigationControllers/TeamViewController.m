@@ -18,60 +18,48 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue
                 sender:(id)sender{
     
+    /*
+     prepaeForSegue is early , do not get into other viewControllers .
+     */
     TeamDetailViewController * teamDVC = segue.destinationViewController;
+    
+    
     
     
     TeamMember * teamMemberJoe = [[TeamMember alloc] initWithName:@"joe"
                                                            number:@"Arizona"
                                                       cityOfbirth:@"382834234"
                                                      favoriteBand:@"Code of iOS pitch"
-                                                        photoFile:@"joe.jpg"];
-    
-    
-    //TeamDetailViewController * teamDVC = [[TeamDetailViewController alloc] initWithnameTexts:@"joe" pictureName:@"0090" phoneNumberText:@"89827" birthPlaceText:@"arizona" favoriteBandText:@"ios songs"];
-    //teamDVC = segue.destinationViewController;
-    
+                                                            image:[UIImage imageNamed:@"joe"]];
     
     TeamMember * teamMemberAvi = [[TeamMember alloc] initWithName:@"Avi"
                                                            number:@"34323569avi"
                                                       cityOfbirth:@"NewYork"
                                                      favoriteBand:@"Ruby Band"
-                                                        photoFile:@"avi.jpg"];
-    
+                                                            image:[UIImage imageNamed:@"avi.jpg"]];
     
     if ([segue.identifier isEqualToString:@"Joe"]) {
 
         NSLog(@" Hello Joe");
-        teamDVC.nameTexts = teamMemberJoe.name;
-        teamDVC.pictureName = teamMemberJoe.photoFile;
-        teamDVC.phoneNumberText = teamMemberJoe.phoneNumber;
-        teamDVC.birthPlaceText = teamMemberJoe.cityOfBirth;
-        teamDVC.favoriteBandText = teamMemberJoe.favoriteBand;
+        teamDVC.teamMeber = teamMemberJoe;
     }
     
     if ([segue.identifier isEqualToString:@"Avi"]) {
         NSLog(@"Avi Hello");
-        
-        teamDVC.nameTexts = teamMemberAvi.name;
-        teamDVC.pictureName = teamMemberAvi.photoFile;
-        teamDVC.phoneNumberText = teamMemberAvi.phoneNumber;
-        teamDVC.birthPlaceText = teamMemberAvi.cityOfBirth;
-        teamDVC.favoriteBandText = teamMemberAvi.favoriteBand;
+        teamDVC.teamMeber = teamMemberAvi;
     }
-    
-    
-}
 
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 

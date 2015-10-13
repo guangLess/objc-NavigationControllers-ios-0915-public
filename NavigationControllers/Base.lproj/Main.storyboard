@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
-        <!--Team View Controller-->
+        <!--team mates-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="TeamViewController" sceneMemberID="viewController">
@@ -33,7 +33,7 @@
                                 <animations/>
                                 <accessibility key="accessibilityConfiguration" label="joeImage"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" backgroundImage="joe">
+                                <state key="normal" backgroundImage="al">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -68,7 +68,7 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Ghh-n8-KQ0"/>
+                    <navigationItem key="navigationItem" title="team mates" id="Ghh-n8-KQ0"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -165,7 +165,6 @@
         <image name="al" width="800" height="800"/>
         <image name="avi" width="640" height="640"/>
         <image name="chris" width="570" height="640"/>
-        <image name="joe" width="300" height="331"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="6wk-ut-xQN"/>

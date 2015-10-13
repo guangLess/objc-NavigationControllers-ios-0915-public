@@ -20,13 +20,13 @@
                      number:(NSString *)phoneNumber
                 cityOfbirth:(NSString *)cityBirth
                favoriteBand:(NSString *)favoriteBand
-                  photoFile:(NSString *)photoFile{
+                      image:(UIImage *)image{
     if (self) {
         _name = name;
         _phoneNumber = phoneNumber;
         _cityOfBirth = cityBirth;
         _favoriteBand = favoriteBand;
-        _photoFile = photoFile;
+        _image = image;
     }
     return  self;
 }
